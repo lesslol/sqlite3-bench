@@ -1,8 +1,8 @@
 # SQLite3 Benchmark
 
 A SQLite3 benchmark commandline tool.
-Most of the code comes from [LevelDB](https://github.com/google/leveldb).
-  [ukontainer/sqlite-bench](https://github.com/ukontainer/sqlite-bench).
+
+Most of the code comes from [LevelDB](https://github.com/google/leveldb) & [ukontainer/sqlite-bench](https://github.com/ukontainer/sqlite-bench).
 
 This is C-api version of [benchmarks/db\_bench\_sqlite3.cc](https://github.com/google/leveldb/blob/master/benchmarks/db_bench_sqlite3.cc).
 
@@ -11,7 +11,7 @@ This is C-api version of [benchmarks/db\_bench\_sqlite3.cc](https://github.com/g
 Requres: WDK 7600, sqlite3.h, sqlite3.lib 
 
 ```sh
-$ nmake
+> nmake
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ Requres: sqlite3.dll
 Usage: bench [OPTION]...
 SQLite3 benchmark tool
 [OPTION]
-  --benchmarks=[BENCH]          specify benchmark
+  --benchmarks=BENCH[,BENCH]*   specify benchmark
   --histogram={0,1}             record histogram
   --compression_ratio=DOUBLE    compression ratio
   --use_existing_db={0,1}       use existing database
@@ -36,7 +36,7 @@ SQLite3 benchmark tool
   --num_pages=INT               number of pages
   --WAL_enabled={1,0}           enable WAL
   --db=PATH                     path to location databases are created
-  --help                        show this help
+  --help                        show this help (-h)
 
 [BENCH]
   fillseq       write N values in sequential key order in async mode
